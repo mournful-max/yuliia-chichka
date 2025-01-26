@@ -17,7 +17,7 @@
 
   text-align: center;
 }
-.catalog-link {
+.catalog-item a {
   display: block;
   padding: 0.75em 1em;
   border-radius: var(--catalog-border-radius);

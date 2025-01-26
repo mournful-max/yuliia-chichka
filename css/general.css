@@ -10,7 +10,6 @@ html, body {
   --document-padding-inline: 1em;
 
   padding: var(--document-padding-block) var(--document-padding-inline);
-  min-height: calc(100vh - var(--document-padding-block) * 2);
 
   font-family: "Balsamiq Sans", serif;
   font-weight: 700;
@@ -46,4 +45,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 p {
   margin-bottom: 1em;
+}
+img {
+  max-width: 100%;
+  height: auto;
 }
