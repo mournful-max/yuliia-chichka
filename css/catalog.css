@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.catalog-item {
+  --catalog-border-radius: 1.25em;
+
+  background-color: white;
+  border: 0.15em solid #424242;
+  border-radius: var(--catalog-border-radius);
+
+  margin-block: 0.5em;
+  width: calc(100vw - var(--document-padding-inline) * 2);
+  max-width: 400px;
+
+  text-align: center;
+}
+.catalog-link {
+  display: block;
+  padding: 0.75em 1em;
+  border-radius: var(--catalog-border-radius);
+}

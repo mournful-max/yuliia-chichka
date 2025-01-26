@@ -1,0 +1,49 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  --document-padding-block: 0.5em;
+  --document-padding-inline: 1em;
+
+  padding: var(--document-padding-block) var(--document-padding-inline);
+  min-height: calc(100vh - var(--document-padding-block) * 2);
+
+  font-family: "Balsamiq Sans", serif;
+  font-weight: 700;
+  color: #424242;
+
+  background-color: #D7E2FA;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul, ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.5em;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+input, textarea, select, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+p {
+  margin-bottom: 1em;
+}
