@@ -5,20 +5,33 @@
   align-items: center;
 }
 .catalog-item {
-  --catalog-border-radius: 1.25em;
+  --catalog-item-border-radius: 1.25em;
 
   background-color: white;
   border: 0.15em solid #424242;
-  border-radius: var(--catalog-border-radius);
+  border-radius: var(--catalog-item-border-radius);
 
   margin-block: 0.5em;
   width: calc(100vw - var(--document-padding-inline) * 2);
-  max-width: 400px;
+  max-width: 22em;
 
   text-align: center;
 }
 .catalog-item a {
   display: block;
   padding: 0.75em 1em;
-  border-radius: var(--catalog-border-radius);
+  border-radius: var(--catalog-item-border-radius);
+}
+.logo-face {
+  max-height: 4.8em;
+  margin-block-end: 0.5em;
+}
+.logo-name {
+  width: 100%;
+  max-width: 22em;
+  margin-block: 0.5em;
+}
+.wait-time-img {
+  max-height: 4.5em;
+  margin-block-start: 0.75em;
 }
