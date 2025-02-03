@@ -36,17 +36,27 @@ h1 > span.apostrophe {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  gap: 1em;
 
+  max-width: 17.6em;
   margin-block-start: 0.5em;
   margin-block-end: 1em;
   font-size: 1.25em;
+  word-break: break-word;
+}
+.catalog-item-short-info h2 {
+  flex: 2;
 }
 .catalog-item-short-info b {
   font-weight: 400;
   font-size: 1.5em;
+  text-align: end;
+  flex: 1;
 }
 b > span.currency-uah {
   font-size: 0.6em;
+  padding-inline-start: 0.25em;
+  word-break: keep-all;
 }
 a.catalog-item-details {
   background-color: white;
