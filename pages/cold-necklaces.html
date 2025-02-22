@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
+
+    <title>Морозна колірна гама</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="catalog-heading">
+          <h1>Морозна колірна гама</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="container">
+        <ul id="catalog-list"></ul>
+      </nav>
+    </main>
+    <script>
+      const data = [
+        {
+          imgSrc: '../assets/images/pages/cold/fish.JPG',
+          imgAlt: 'Кулон з синьою рибкою',
+          catalogItems: [
+            {
+              name: 'кулон Рибка',
+              price: 500
+            }
+          ],
+          href: 'https://www.instagram.com/p/C9B8tl5NMzI/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/heart.jpg',
+          imgAlt: 'Намисто з анатомічним серцем',
+          catalogItems: [
+            {
+              name: 'Серце',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/DFsNz6ZN2KF/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/seashell.JPG',
+          imgAlt: 'Намисто з білою мушлею',
+          catalogItems: [
+            {
+              name: 'Мушля',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/C8zBkk0NMYt/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/bellflower.jpg',
+          imgAlt: 'Намисто з квіткою дзвоником',
+          catalogItems: [
+            {
+              name: 'Дзвін',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/CwxydVXNCrx/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/green lake.jpg',
+          imgAlt: 'Намисто натхненне виглядом озера',
+          catalogItems: [
+            {
+              name: 'Озеро',
+              price: 980
+            }
+          ],
+          href: 'https://www.instagram.com/p/Co4GtPuNrEb/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/my fish.jpg',
+          imgAlt: 'Намисто рибкою трансформером',
+          catalogItems: [
+            {
+              name: 'Моя риба',
+              price: 900
+            }
+          ],
+          href: 'https://www.instagram.com/p/C21uxo3t_Ix/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/bear.jpg',
+          imgAlt: 'Намисто з ведмедиком',
+          catalogItems: [
+            {
+              name: 'Ведмедик',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/C0yQOSvNIVI/'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/starfish.JPG',
+          imgAlt: 'Намисто з морською зіркою',
+          catalogItems: [
+            {
+              name: 'Морська зірка',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/C94lN-YNPKF/?img_index=2'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/cornflowers.jpg',
+          imgAlt: 'Сережки Волошки',
+          catalogItems: [
+            {
+              name: 'Сережки Волошки',
+              price: 800
+            }
+          ],
+          href: 'hhttps://www.instagram.com/p/CtRkPQtNRc4/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/angel.JPG',
+          imgAlt: 'Намисто з ангелочком',
+          catalogItems: [
+            {
+              name: 'Ангелик',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/CoKDyEVt_-i/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/cold/ocean.jpg',
+          imgAlt: 'Намисто натхненне океаном',
+          catalogItems: [
+            {
+              name: 'намисто Океан',
+              price: 900
+            },
+            {
+              name: 'кулон Морська зірка',
+              price: 500
+            },
+            {
+              name: 'набір (3 прикраси)',
+              price: 1500
+            }
+          ],
+          href: 'https://www.instagram.com/p/CsEnRW4Nomu/?img_index=1'
+        }
+      ];
+
+      const catalogList = document.getElementById('catalog-list');
+
+      data.forEach((item) => {
+        const li = document.createElement('li');
+        li.classList.add('catalog-item');
+
+        // Catalog item image
+        const img = document.createElement('img');
+        img.classList.add('catalog-item-image');
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('src', item.imgSrc);
+        img.setAttribute('alt', item.imgAlt);
+        li.appendChild(img);
+
+        // Catalog item information
+        item.catalogItems.forEach((catalogItem) => {
+          const catalogItemDiv = document.createElement('div');
+          catalogItemDiv.classList.add('catalog-item-short-info');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = catalogItem.name;
+          catalogItemDiv.appendChild(h2);
+
+          const b = document.createElement('b');
+          b.innerHTML = `${catalogItem.price}<span class="currency-uah">грн</span>`;
+          catalogItemDiv.appendChild(b);
+
+          li.appendChild(catalogItemDiv);
+        });
+
+        // Catalog item details link
+        const detailsLink = document.createElement('a');
+        detailsLink.classList.add('catalog-item-details');
+        detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
+        detailsLink.textContent = 'детальніше';
+        li.appendChild(detailsLink);
+
+        catalogList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

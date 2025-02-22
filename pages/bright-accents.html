@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
+
+    <title>Твої яскраві акценти</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="catalog-heading">
+          <h1>Твої яскраві акценти</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="container">
+        <ul id="catalog-list"></ul>
+      </nav>
+    </main>
+    <script>
+      const data = [
+        {
+          imgSrc: '../assets/images/pages/bright accents/pomegranate.jpg',
+          imgAlt: 'Намисто в кольорах Гранату',
+          catalogItems: [
+            {
+              name: 'Гранат',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/DBLhw7etomf/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/my dear.jpeg',
+          imgAlt: 'Наймиліше рожеве намисто',
+          catalogItems: [
+            {
+              name: 'Моя мила',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/C24dxhVNVCs/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/fairground.jpg',
+          imgAlt: 'Намисто натхненне ярмаркою',
+          catalogItems: [
+            {
+              name: 'Клоун',
+              price: 950
+            }
+          ],
+          href: 'https://www.instagram.com/p/CzyDxTfNubY/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/pomegranate color.JPG',
+          imgAlt: 'Намисто натхненне фільмом КОЛІР ГРАНАТУ',
+          catalogItems: [
+            {
+              name: 'Колір гранату',
+              price: 1080
+            }
+          ],
+          href: 'https://www.instagram.com/p/DAV7E53tCMg/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/hibiscus.JPG',
+          imgAlt: 'Набір з квіткою гібіскус',
+          catalogItems: [
+            {
+              name: 'набір Гібіскус',
+              price: 980
+            }
+          ],
+          href: 'https://www.instagram.com/p/C89W92VNatT/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/phoenix.JPG',
+          imgAlt: 'Намисто з яскравим феніксом',
+          catalogItems: [
+            {
+              name: 'Фенікс',
+              price: 980
+            }
+          ],
+          href: 'https://www.instagram.com/p/C14AMlnNhuP/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/cock.jpg',
+          imgAlt: 'Намисто з півником',
+          catalogItems: [
+            {
+              name: 'намисто',
+              price: 900
+            },
+            {
+              name: 'кулон',
+              price: 500
+            },
+            {
+              name: 'набір Півник',
+              price: 1300
+            }
+          ],
+          href: 'https://www.instagram.com/p/CrjMjtGNcLb/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/butterfly.jpg',
+          imgAlt: 'Намисто з метеликом',
+          catalogItems: [
+            {
+              name: 'Метелик',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/CxQW8bVNhni/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/burgundy.jpeg',
+          imgAlt: 'Намисто з червоними акцентами та пташкою',
+          catalogItems: [
+            {
+              name: 'Бордо',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/Cx5EUkqNuk6/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/Shrek.jpeg',
+          imgAlt: 'Намисто для Фіони',
+          catalogItems: [
+            {
+              name: 'Шрек',
+              price: 900
+            }
+          ],
+          href: 'https://www.instagram.com/p/C6_B6vztnBX/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/bright accents/dragonfly.jpg',
+          imgAlt: 'Намисто з бабкою',
+          catalogItems: [
+            {
+              name: 'кулон Бабка',
+              price: 600
+            },
+            {
+              name: 'набір Бабка',
+              price: 980
+            }
+          ],
+          href: 'https://www.instagram.com/p/CvHZ2xStiuz/?img_index=1'
+        }
+      ];
+
+      const catalogList = document.getElementById('catalog-list');
+
+      data.forEach((item) => {
+        const li = document.createElement('li');
+        li.classList.add('catalog-item');
+
+        // Catalog item image
+        const img = document.createElement('img');
+        img.classList.add('catalog-item-image');
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('src', item.imgSrc);
+        img.setAttribute('alt', item.imgAlt);
+        li.appendChild(img);
+
+        // Catalog item information
+        item.catalogItems.forEach((catalogItem) => {
+          const catalogItemDiv = document.createElement('div');
+          catalogItemDiv.classList.add('catalog-item-short-info');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = catalogItem.name;
+          catalogItemDiv.appendChild(h2);
+
+          const b = document.createElement('b');
+          b.innerHTML = `${catalogItem.price}<span class="currency-uah">грн</span>`;
+          catalogItemDiv.appendChild(b);
+
+          li.appendChild(catalogItemDiv);
+        });
+
+        // Catalog item details link
+        const detailsLink = document.createElement('a');
+        detailsLink.classList.add('catalog-item-details');
+        detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
+        detailsLink.textContent = 'детальніше';
+        li.appendChild(detailsLink);
+
+        catalogList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

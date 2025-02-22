@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
+
+    <title>Прикраси в сонячних тонах</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="catalog-heading">
+          <h1>Прикраси в сонячних тонах</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="container">
+        <ul id="catalog-list"></ul>
+      </nav>
+    </main>
+    <script>
+      const data = [
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/forest.jpg',
+          imgAlt: 'Намисто натхненне лісом',
+          catalogItems: [
+            {
+              name: 'Ліс',
+              price: 980
+            }
+          ],
+          href: 'https://www.instagram.com/p/DCqzhqfNdLz/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/lily.JPG',
+          imgAlt: 'Намисто з Лілеєю',
+          catalogItems: [
+            {
+              name: 'Лілея',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/C_coshbNl9L/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/Harry Potter.JPG',
+          imgAlt: 'Намисто натхненне улюбленим дитячим фільмом',
+          catalogItems: [
+            {
+              name: 'Гаррі Поттер',
+              price: 1080
+            }
+          ],
+          href: 'https://www.instagram.com/p/DGC6gfUNdTg/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/summer heat.jpg',
+          imgAlt: 'Намисто натхненне сонячними днями',
+          catalogItems: [
+            {
+              name: 'Літня спека',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/C8eteg8NFgs/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/squirrel.jpg',
+          imgAlt: 'Намисто з Білочкою',
+          catalogItems: [
+            {
+              name: 'Білочка',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/CxVwO2ktM7_/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/acorn.JPG',
+          imgAlt: 'Намисто з жолудем',
+          catalogItems: [
+            {
+              name: 'Жолудь',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/CxS6H8RtBBP/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/sunny necklaces/green forest.JPG',
+          imgAlt: 'Намисто натхненне весняним лісом',
+          catalogItems: [
+            {
+              name: 'намисто Весняний ліс',
+              price: 850
+            },
+            {
+              name: 'кулон Синичка',
+              price: 500
+            },
+            {
+              name: 'набір',
+              price: 1200
+            }
+          ],
+          href: 'https://www.instagram.com/p/CqLd14ztO-o/?img_index=1'
+        }
+      ];
+
+      const catalogList = document.getElementById('catalog-list');
+
+      data.forEach((item) => {
+        const li = document.createElement('li');
+        li.classList.add('catalog-item');
+
+        // Catalog item image
+        const img = document.createElement('img');
+        img.classList.add('catalog-item-image');
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('src', item.imgSrc);
+        img.setAttribute('alt', item.imgAlt);
+        li.appendChild(img);
+
+        // Catalog item information
+        item.catalogItems.forEach((catalogItem) => {
+          const catalogItemDiv = document.createElement('div');
+          catalogItemDiv.classList.add('catalog-item-short-info');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = catalogItem.name;
+          catalogItemDiv.appendChild(h2);
+
+          const b = document.createElement('b');
+          b.innerHTML = `${catalogItem.price}<span class="currency-uah">грн</span>`;
+          catalogItemDiv.appendChild(b);
+
+          li.appendChild(catalogItemDiv);
+        });
+
+        // Catalog item details link
+        const detailsLink = document.createElement('a');
+        detailsLink.classList.add('catalog-item-details');
+        detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
+        detailsLink.textContent = 'детальніше';
+        li.appendChild(detailsLink);
+
+        catalogList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

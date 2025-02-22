@@ -5,23 +5,25 @@
   padding: 0;
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   --document-padding-block: 0.5em;
   --document-padding-inline: 1em;
 
   padding: var(--document-padding-block) var(--document-padding-inline);
 
-  font-family: "Balsamiq Sans", serif;
+  font-family: 'Balsamiq Sans', serif;
   font-weight: 700;
   color: #424242;
 
-  background-color: #D7E2FA;
+  background-color: #d7e2fa;
 }
 a {
   text-decoration: none;
   color: inherit;
 }
-ul, ol {
+ul,
+ol {
   list-style-type: none;
   padding-left: 0;
 }
@@ -29,16 +31,25 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
-th, td {
+th,
+td {
   padding: 0.5em;
   text-align: left;
   border: 1px solid #ddd;
 }
-input, textarea, select, button {
+input,
+textarea,
+select,
+button {
   font-family: inherit;
   font-size: inherit;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   font-weight: normal;

@@ -1,17 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../css/general.css">
-    <link rel="stylesheet" href="../css/edible-decorations.css">
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
 
     <title>Прикраси які хочеться зʼїсти</title>
   </head>
@@ -25,191 +28,191 @@
     </header>
     <main>
       <nav class="container">
-        <ul id="catalog-list">
-        </ul>
+        <ul id="catalog-list"></ul>
       </nav>
     </main>
     <script>
       const data = [
         {
-          "imgSrc": "../assets/images/pages/edible decorations/dumplings.png",
-          "imgAlt": "Намисто з інгредієнтами вареника",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/dumplings.png',
+          imgAlt: 'Намисто з інгредієнтами вареника',
+          catalogItems: [
             {
-              "name": "Вареники",
-              "price": 900
+              name: 'Вареники',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C6lw3eRtZ5O/?img_index=1"
+          href: 'https://www.instagram.com/p/C6lw3eRtZ5O/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/borsch.png",
-          "imgAlt": "Намисто натхненне борщем",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/borsch.png',
+          imgAlt: 'Намисто натхненне борщем',
+          catalogItems: [
             {
-              "name": "Борщ",
-              "price": 900
+              name: 'Борщ',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C4S4gRWtNF_/?img_index=1"
+          href: 'https://www.instagram.com/p/C4S4gRWtNF_/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/bread.png",
-          "imgAlt": "Намисто з круасаном, бутербродом та хлібчиком",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/bread.png',
+          imgAlt: 'Намисто з круасаном, бутербродом та хлібчиком',
+          catalogItems: [
             {
-              "name": "Хліб",
-              "price": 900
+              name: 'Хліб',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C-ffukyN-ah/?img_index=1"
+          href: 'https://www.instagram.com/p/C-ffukyN-ah/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/cosiness.png",
-          "imgAlt": "Намисто з чаєм та печивом",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/cosiness.png',
+          imgAlt: 'Намисто з чаєм та печивом',
+          catalogItems: [
             {
-              "name": "Затишок",
-              "price": 980
+              name: 'Затишок',
+              price: 980
             }
           ],
-          "href": "https://www.instagram.com/p/DBtukfjt4vu/?img_index=1"
+          href: 'https://www.instagram.com/p/DBtukfjt4vu/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/autumn-harvest.png",
-          "imgAlt": "Намисто з фруктами та овочами",
-          "catalogItems": [
+          imgSrc:
+            '../assets/images/pages/edible decorations/autumn-harvest.png',
+          imgAlt: 'Намисто з фруктами та овочами',
+          catalogItems: [
             {
-              "name": "Осінній врожай",
-              "price": 1080
+              name: 'Осінній врожай',
+              price: 1080
             }
           ],
-          "href": "https://www.instagram.com/p/DBTd86zttmg/?img_index=1"
+          href: 'https://www.instagram.com/p/DBTd86zttmg/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/didukh.png",
-          "imgAlt": "Намисто з символами святого вечору",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/didukh.png',
+          imgAlt: 'Намисто з символами святого вечору',
+          catalogItems: [
             {
-              "name": "Дідух",
-              "price": 1080
+              name: 'Дідух',
+              price: 1080
             }
           ],
-          "href": "https://www.instagram.com/p/DC_jXveNcMS/?img_index=1"
+          href: 'https://www.instagram.com/p/DC_jXveNcMS/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/friday.png",
-          "imgAlt": "Намисто, яке символізує вечір з дівчатами",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/friday.png',
+          imgAlt: 'Намисто, яке символізує вечір з дівчатами',
+          catalogItems: [
             {
-              "name": "Пʼятниця",
-              "price": 900
+              name: 'Пʼятниця',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C_xqhZ8NWJC/?img_index=1"
+          href: 'https://www.instagram.com/p/C_xqhZ8NWJC/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/compote.png",
-          "imgAlt": "Намисто з літніми фруктами",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/compote.png',
+          imgAlt: 'Намисто з літніми фруктами',
+          catalogItems: [
             {
-              "name": "Компот",
-              "price": 1080
+              name: 'Компот',
+              price: 1080
             }
           ],
-          "href": "https://www.instagram.com/p/C6yGUCuNLlF/?img_index=1"
+          href: 'https://www.instagram.com/p/C6yGUCuNLlF/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/borsch2.png",
-          "imgAlt": "Набір натхненний борщем",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/borsch2.png',
+          imgAlt: 'Набір натхненний борщем',
+          catalogItems: [
             {
-              "name": "браслет Борщ",
-              "price": 750
+              name: 'браслет Борщ',
+              price: 750
             },
             {
-              "name": "каблучка",
-              "price": 300
+              name: 'каблучка',
+              price: 300
             },
             {
-              "name": "сережки",
-              "price": 650
+              name: 'сережки',
+              price: 650
             }
           ],
-          "href": "https://www.instagram.com/p/C5X-GrzNFVe/?img_index=1"
+          href: 'https://www.instagram.com/p/C5X-GrzNFVe/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/pretty-girl.png",
-          "imgAlt": "Намисто з ягідками",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/pretty-girl.png',
+          imgAlt: 'Намисто з ягідками',
+          catalogItems: [
             {
-              "name": "моносережка",
-              "price": 350
+              name: 'моносережка',
+              price: 350
             },
             {
-              "name": "кулон",
-              "price": 350
+              name: 'кулон',
+              price: 350
             },
             {
-              "name": "набір Вишні",
-              "price": 600
+              name: 'набір Вишні',
+              price: 600
             }
           ],
-          "href": "https://www.instagram.com/p/C8POgvYtDKJ/?img_index=1"
+          href: 'https://www.instagram.com/p/C8POgvYtDKJ/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/sweetie.png",
-          "imgAlt": "Намисто з солодощів",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/sweetie.png',
+          imgAlt: 'Намисто з солодощів',
+          catalogItems: [
             {
-              "name": "Моя солодка",
-              "price": 900
+              name: 'Моя солодка',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C2zaSfYt7ov/?img_index=1"
+          href: 'https://www.instagram.com/p/C2zaSfYt7ov/?img_index=1'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/pumpkin.png",
-          "imgAlt": "Намисто  гарбузиком",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/pumpkin.png',
+          imgAlt: 'Намисто  гарбузиком',
+          catalogItems: [
             {
-              "name": "Гарбуз",
-              "price": 800
+              name: 'Гарбуз',
+              price: 800
             }
           ],
-          "href": "https://www.instagram.com/p/CxpQUlXNi1S/"
+          href: 'https://www.instagram.com/p/CxpQUlXNi1S/'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/persimmon.png",
-          "imgAlt": "Намисто з хурмою",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/persimmon.png',
+          imgAlt: 'Намисто з хурмою',
+          catalogItems: [
             {
-              "name": "намисто Хурма",
-              "price": 850
+              name: 'намисто Хурма',
+              price: 850
             },
             {
-              "name": "набір",
-              "price": 1000
+              name: 'набір',
+              price: 1000
             }
           ],
-          "href": "https://www.instagram.com/p/CtOUA0sNsWC/"
+          href: 'https://www.instagram.com/p/CtOUA0sNsWC/'
         },
         {
-          "imgSrc": "../assets/images/pages/edible decorations/lemonade.png",
-          "imgAlt": "Намисто з лимончиком",
-          "catalogItems": [
+          imgSrc: '../assets/images/pages/edible decorations/lemonade.png',
+          imgAlt: 'Намисто з лимончиком',
+          catalogItems: [
             {
-              "name": "Лимонад",
-              "price": 900
+              name: 'Лимонад',
+              price: 900
             }
           ],
-          "href": "https://www.instagram.com/p/C8eteg8NFgs/?img_index=3"
+          href: 'https://www.instagram.com/p/C8eteg8NFgs/?img_index=3'
         }
       ];
 
       const catalogList = document.getElementById('catalog-list');
 
-      data.forEach(item => {
+      data.forEach((item) => {
         const li = document.createElement('li');
         li.classList.add('catalog-item');
 
@@ -222,7 +225,7 @@
         li.appendChild(img);
 
         // Catalog item information
-        item.catalogItems.forEach(catalogItem => {
+        item.catalogItems.forEach((catalogItem) => {
           const catalogItemDiv = document.createElement('div');
           catalogItemDiv.classList.add('catalog-item-short-info');
 
@@ -241,6 +244,8 @@
         const detailsLink = document.createElement('a');
         detailsLink.classList.add('catalog-item-details');
         detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
         detailsLink.textContent = 'детальніше';
         li.appendChild(detailsLink);
 

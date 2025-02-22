@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
+
+    <title>Щоденна база</title>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="catalog-heading">
+          <h1>Щоденна база</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="container">
+        <ul id="catalog-list"></ul>
+      </nav>
+    </main>
+    <script>
+      const data = [
+        {
+          imgSrc: '../assets/images/pages/base/red bird.jpg',
+          imgAlt: 'Кулон пташка з червоними акцентами',
+          catalogItems: [
+            {
+              name: 'Пташка (червона, синя, чорна)',
+              price: 500
+            }
+          ],
+          href: 'https://www.instagram.com/p/DAdakzYNFgk/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/fairy.jpg',
+          imgAlt: 'Ніжне біле намисто',
+          catalogItems: [
+            {
+              name: 'Роса на сонці',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/C_IYnS2NkmF/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/cherry tree.jpg',
+          imgAlt: 'Намисто натхненне цвітінням сакури',
+          catalogItems: [
+            {
+              name: 'Сакура',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/C70zt9uNRUG/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/strawberry.JPG',
+          imgAlt: 'Намисто з полуницями',
+          catalogItems: [
+            {
+              name: 'намисто',
+              price: 800
+            },
+            {
+              name: 'сережки',
+              price: 550
+            },
+            {
+              name: 'набір Полуниці',
+              price: 1300
+            }
+          ],
+          href: 'https://www.instagram.com/p/C5q1DU9tvk5/'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/dragon.jpg',
+          imgAlt: 'Чорно біле намисто',
+          catalogItems: [
+            {
+              name: 'Дракон',
+              price: 950
+            }
+          ],
+          href: 'https://www.instagram.com/p/C0g5qtMtOfL/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/mouse.JPG',
+          imgAlt: 'Намисто для трьох пліткарок',
+          catalogItems: [
+            {
+              name: 'Щури',
+              price: 900
+            }
+          ],
+          href: 'https://www.instagram.com/p/C0lS4nrN8la/?img_index=2'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/snowdrop.jpg',
+          imgAlt: 'Намисто з підсніжником',
+          catalogItems: [
+            {
+              name: 'Підсніжник',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/C5AujJVNyjZ/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/bow.JPG',
+          imgAlt: 'Намисто з червоним бантиком',
+          catalogItems: [
+            {
+              name: 'Бантик',
+              price: 950
+            }
+          ],
+          href: 'https://www.instagram.com/p/C4Ad67lN1mw/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/bird pastel.jpg',
+          imgAlt: 'Намисто біло-коричневе з пташкою',
+          catalogItems: [
+            {
+              name: 'Пташка пастель',
+              price: 850
+            }
+          ],
+          href: 'https://www.instagram.com/p/CyKubouNaih/'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/acorn pastel.JPG',
+          imgAlt: 'Намисто з жолудем',
+          catalogItems: [
+            {
+              name: 'Жолудь пастель',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/CxYMgO9tHwH/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/hydrangea.JPG',
+          imgAlt: 'Намисто з гортензією та пташкою',
+          catalogItems: [
+            {
+              name: 'Гортензія',
+              price: 900
+            }
+          ],
+          href: 'https://www.instagram.com/p/CucOGamNGty/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/horse.jpg',
+          imgAlt: 'Кулон коник',
+          catalogItems: [
+            {
+              name: 'Коник',
+              price: 500
+            }
+          ],
+          href: 'https://www.instagram.com/p/CtySl7UNtov/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/sweet dreams.JPGg',
+          imgAlt: 'Намисто у ніжних тонах',
+          catalogItems: [
+            {
+              name: 'намисто Солодкі мрії',
+              price: 800
+            },
+            {
+              name: 'Набір',
+              price: 1200
+            }
+          ],
+          href: 'https://www.instagram.com/p/CtySl7UNtov/?img_index=1'
+        },
+        {
+          imgSrc: '../assets/images/pages/base/white heart.JPG',
+          imgAlt: 'Білосніжне намисто з анатомічним серцем',
+          catalogItems: [
+            {
+              name: 'Серце білосніжне',
+              price: 800
+            }
+          ],
+          href: 'https://www.instagram.com/p/Cn3vzamNF0L/?img_index=1'
+        }
+      ];
+
+      const catalogList = document.getElementById('catalog-list');
+
+      data.forEach((item) => {
+        const li = document.createElement('li');
+        li.classList.add('catalog-item');
+
+        // Catalog item image
+        const img = document.createElement('img');
+        img.classList.add('catalog-item-image');
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('src', item.imgSrc);
+        img.setAttribute('alt', item.imgAlt);
+        li.appendChild(img);
+
+        // Catalog item information
+        item.catalogItems.forEach((catalogItem) => {
+          const catalogItemDiv = document.createElement('div');
+          catalogItemDiv.classList.add('catalog-item-short-info');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = catalogItem.name;
+          catalogItemDiv.appendChild(h2);
+
+          const b = document.createElement('b');
+          b.innerHTML = `${catalogItem.price}<span class="currency-uah">грн</span>`;
+          catalogItemDiv.appendChild(b);
+
+          li.appendChild(catalogItemDiv);
+        });
+
+        // Catalog item details link
+        const detailsLink = document.createElement('a');
+        detailsLink.classList.add('catalog-item-details');
+        detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
+        detailsLink.textContent = 'детальніше';
+        li.appendChild(detailsLink);
+
+        catalogList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>
