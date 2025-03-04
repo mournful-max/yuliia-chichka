@@ -5,18 +5,19 @@
   padding: 0;
   box-sizing: border-box;
 }
-html,
+html {
+  background-color: #d7e2fa;
+}
 body {
   --document-padding-block: 0.5em;
   --document-padding-inline: 1em;
+  --document-font-color: #424242;
 
   padding: var(--document-padding-block) var(--document-padding-inline);
 
   font-family: 'Balsamiq Sans', serif;
   font-weight: 700;
-  color: #424242;
-
-  background-color: #d7e2fa;
+  color: var(--document-font-color);
 }
 a {
   text-decoration: none;

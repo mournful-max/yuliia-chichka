@@ -1,8 +1,8 @@
-html,
-body {
+html {
   background-color: #edeef1;
 }
-.container {
+.container,
+.go-prev-page-button-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -73,4 +73,30 @@ a.catalog-item-details {
 
   display: block;
   padding: 0.75em 1em;
+}
+.go-prev-page-button-container {
+  position: sticky;
+  top: var(--document-padding-block);
+
+  margin-block-end: 1.25rem;
+}
+.go-prev-page-button-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  max-width: 22em;
+}
+#go-prev-page-button {
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 8px;
+  padding: 0.25rem 0.75rem;
+
+  border: 0.15em solid #424242;
+  border-radius: 1.25em;
+  color: var(--document-font-color);
+  cursor: pointer;
 }

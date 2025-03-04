@@ -19,6 +19,14 @@
     <title>Прикраси в сонячних тонах</title>
   </head>
   <body>
+    <div class="go-prev-page-button-container">
+      <div class="go-prev-page-button-wrapper">
+        <button type="button" id="go-prev-page-button">
+          <img src="../assets/images/pages/shared/left-arrow.svg" alt="←" />
+          назад
+        </button>
+      </div>
+    </div>
     <header>
       <div class="container">
         <div class="catalog-heading">
@@ -32,6 +40,12 @@
       </nav>
     </main>
     <script>
+      document
+        .getElementById('go-prev-page-button')
+        .addEventListener('click', function () {
+          window.history.back();
+        });
+
       const data = [
         {
           imgSrc: '../assets/images/pages/sunny necklaces/forest.jpg',
