@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/pages-catalog.css" />
+
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="3e409a77-ee3e-45a9-bd00-c10059881d24"
+    ></script>
+
+    <title>Магія твого знаку зодіаку</title>
+  </head>
+  <body>
+    <div class="go-prev-page-button-container">
+      <div class="go-prev-page-button-wrapper">
+        <button type="button" id="go-prev-page-button">
+          <img src="../assets/images/pages/shared/left-arrow.svg" alt="←" />
+          назад
+        </button>
+      </div>
+    </div>
+    <header>
+      <div class="container">
+        <div class="catalog-heading">
+          <h1>Магія твого знаку зодіаку</h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <nav class="container">
+        <ul id="catalog-list"></ul>
+      </nav>
+    </main>
+    <script>
+      document
+        .getElementById('go-prev-page-button')
+        .addEventListener('click', function () {
+          window.history.back();
+        });
+
+      const data = [
+      {
+          imgSrc: '../assets/images/pages/zodiac signs/Pisces.jpg',
+          imgAlt: 'Намисто для знаку риби',
+          catalogItems: [
+            {
+              name: 'Риби',
+              price: 1500,
+              length: 'намисто 39-44 см'
+            }
+          ],
+          href: 'https://www.instagram.com/p/DU-SMD7jYGo/?img_index=1'
+        },
+      {
+          imgSrc: '../assets/images/pages/zodiac signs/Aquarius.jpg',
+          imgAlt: 'Намисто для знаку водолій',
+          catalogItems: [
+            {
+              name: 'Водолій',
+              price: 1350,
+              length: 'намисто 40-45 см'
+            }
+          ],
+          href: 'https://www.instagram.com/p/DUGZHejDYjm/?img_index=1'
+        },
+      {
+          imgSrc: '../assets/images/pages/zodiac signs/Capricorn.jpg',
+          imgAlt: 'Намисто для знаку козоріг',
+          catalogItems: [
+            {
+              name: 'Козоріг',
+              price: 1500,
+              length: 'намисто 41-45 см'
+            }
+          ],
+          href: 'https://www.instagram.com/p/DTNDsqfjcn4/?img_index=1'
+        },
+      {
+          imgSrc: '../assets/images/pages/zodiac signs/Sagittarius.jpg',
+          imgAlt: 'Намисто для знаку стрілець',
+          catalogItems: [
+            {
+              name: 'Стрілець',
+              price: 1400
+            }
+          ],
+          href: 'https://www.instagram.com/p/DRb1eZUDYpD/?img_index=1'
+        },
+      {
+          imgSrc: '../assets/images/pages/zodiac signs/Scorpio.jpg',
+          imgAlt: 'Намисто з скорпіоном',
+          catalogItems: [
+            {
+              name: 'Скорпіон',
+              price: 1430
+            }
+          ],
+          href: 'https://www.instagram.com/p/DRB8xGzjQ1W/?img_index=1'
+        }
+      ];
+
+      const catalogList = document.getElementById('catalog-list');
+
+      data.forEach((item) => {
+        const li = document.createElement('li');
+        li.classList.add('catalog-item');
+
+        // Catalog item image
+        const img = document.createElement('img');
+        img.classList.add('catalog-item-image');
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('src', item.imgSrc);
+        img.setAttribute('alt', item.imgAlt);
+        li.appendChild(img);
+
+        // Catalog item information
+        item.catalogItems.forEach((catalogItem) => {
+          const catalogItemDiv = document.createElement('div');
+          catalogItemDiv.classList.add('catalog-item-short-info');
+
+          const h2 = document.createElement('h2');
+          h2.textContent = catalogItem.name;
+          catalogItemDiv.appendChild(h2);
+
+          const b = document.createElement('b');
+          b.innerHTML = `${catalogItem.price}<span class="currency-uah">грн</span>`;
+          catalogItemDiv.appendChild(b);
+
+          const p = document.createElement('p');
+          p.textContent = catalogItem.length;
+          catalogItemDiv.appendChild(p);
+
+          li.appendChild(catalogItemDiv);
+        });
+
+        // Catalog item details link
+        const detailsLink = document.createElement('a');
+        detailsLink.classList.add('catalog-item-details');
+        detailsLink.setAttribute('href', item.href);
+        detailsLink.setAttribute('target', '_blank'); // Opens the link in a new tab
+        detailsLink.setAttribute('rel', 'noopener noreferrer'); // Improves security
+        detailsLink.textContent = 'детальніше';
+        li.appendChild(detailsLink);
+
+        catalogList.appendChild(li);
+      });
+    </script>
+  </body>
+</html>

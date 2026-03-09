@@ -18,31 +18,29 @@ html {
   max-width: 22em;
 }
 .catalog-heading h1 {
-  font-size: 3.2em;
-  max-width: 6em;
+  font-size: 2.5em;
 }
 h1 > span.apostrophe {
   font-size: 0.7em;
 }
 .catalog-item {
-  margin-block-start: 4em;
+  margin-block-start: 2.5em;
 }
 .catalog-item-image {
   width: 100%;
   max-width: 22em;
-  margin-block: 0.5em;
   border-radius: 1.25em;
+  margin-bottom: 0.2em;
 }
 .catalog-item-short-info {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 1em;
 
   max-width: 17.6em;
-  margin-block-start: 0.5em;
-  margin-block-end: 1em;
+  margin-top: 0.9em;
   font-size: 1.25em;
   word-break: break-word;
 }
@@ -60,12 +58,17 @@ b > span.currency-uah {
   padding-inline-start: 0.25em;
   word-break: keep-all;
 }
+.catalog-item-short-info p {
+  flex-basis: 100%;
+  font-weight: 400;
+  margin-bottom: 0;
+}
 a.catalog-item-details {
   background-color: white;
   border: 0.15em solid #424242;
   border-radius: 1.25em;
 
-  margin-block: 0.5em;
+  margin-top: 1.2em;
   width: calc(100vw - var(--document-padding-inline) * 2);
   max-width: 22em;
 
